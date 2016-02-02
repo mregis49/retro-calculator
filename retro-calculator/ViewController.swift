@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         case Multiply = "*"
         case Divide = "/"
         case Add = "+"
-        case Subtact = "-"
+        case Subtract = "-"
         case Empty = "Empty"
         
     }
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     }
         
     @IBAction func onSubtractPressed(sender: AnyObject) {
-        processOperation(Operation.Subtact)
+        processOperation(Operation.Subtract)
     }
     
     @IBAction func onAddPressed(sender: AnyObject) {
@@ -102,7 +102,6 @@ class ViewController: UIViewController {
             //Run Math
             
             //A user selected an opeartor but then selected another operator without first entering a number
-            
             if runningNumber != "" {
                 rightValStr = runningNumber
                 runningNumber = ""
@@ -111,7 +110,7 @@ class ViewController: UIViewController {
                     result = "\(Double(leftValStr)! * Double(rightValStr)!)"
                 } else if currentOperation == Operation.Divide {
                     result = "\(Double(leftValStr)! / Double(rightValStr)!)"
-                } else if currentOperation == Operation.Subtact {
+                } else if currentOperation == Operation.Subtract {
                     result = "\(Double(leftValStr)! - Double(rightValStr)!)"
                 } else if currentOperation == Operation.Add {
                     result = "\(Double(leftValStr)! + Double(rightValStr)!)"
